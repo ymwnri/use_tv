@@ -29,3 +29,14 @@ class TV:
         # Check if TV is on and channel is between 1 and 120
         if self.on and 1 <= channel <= 120:
             self.channel = channel
+
+    # Get the current volume
+    def get_volume(self) -> int:
+        return self.volume
+    
+    # Set the volume
+    def set_volume(self, volume: int) -> None:
+
+        # Check if TV is on and volume is between 1 and 7
+        if self.on and 1 <= volume <= 7:
+            self.volume = volume
