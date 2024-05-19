@@ -40,3 +40,15 @@ class TV:
         # Check if TV is on and volume is between 1 and 7
         if self.on and 1 <= volume <= 7:
             self.volume = volume
+
+    # Channel up
+    def channel_up(self) -> None:
+            
+        # Check if TV is on and channel is less than 120
+        self.channel = self.channel + 1 if self.on and self.channel < 120 else self.channel
+
+    # Channel down
+    def channel_down(self) -> None:
+        
+        # Check if TV is on and channel is greater than 1
+        self.channel = self.channel - 1 if self.on and self.channel > 1 else self.channel
